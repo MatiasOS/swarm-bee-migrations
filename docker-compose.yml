@@ -1,0 +1,25 @@
+version: "3.0"
+services:
+  swarm:
+    image: ethersphere/swarm
+    container_name: swarm
+    ports:
+      - "8500:8500"
+      - "30399:30399"
+    entrypoint: "sh /entrypoint/run.sh"
+    volumes:
+      - "./swarm/entrypoint:/entrypoint"
+      - "./swarm/hostdata:/data"
+      - "./swarm/password:/password"
+  bee:
+    image: ethersphere/bee
+    container_name: bee
+    ports:
+      - 6060:6060
+      - 7070:7070
+      - 8080:8080
+    entrypoint: "sh /entrypoint/run.sh"
+    volumes:
+      - "./bee/entrypoint:/entrypoint"
+      - "./bee/hostdata:/data"
+      - "./bee/password:/password"
