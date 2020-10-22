@@ -1,0 +1,26 @@
+{
+  "name": "swarm-bee-migrations",
+  "version": "1.0.0",
+  "description": "Test for migration",
+  "main": "index.js",
+  "scripts": {
+    "migrate:swarm:bee": "node migrate.js",
+    "docker": "docker-compose up"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiasOS/swarm-bee-migrations.git"
+  },
+  "author": "matias.ovejasmith@gmail.com",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/MatiasOS/swarm-bee-migrations/issues"
+  },
+  "homepage": "https://github.com/MatiasOS/swarm-bee-migrations#readme",
+  "dependencies": {
+    "@erebos/swarm-node": "^0.13.0",
+    "axios": "^0.20.0",
+    "form-data": "^3.0.0",
+    "node-fetch": "^2.6.1"
+  }
+}
